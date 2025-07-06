@@ -1,4 +1,9 @@
 import { defineConfig } from "drizzle-kit";
+import * as dotenv from 'dotenv';
+
+// Load environment variables from .env.local
+// Change the path if your .env file is located elsewhere
+dotenv.config({ path: '.env.local' });
  
 const dbUrl = process.env.DB_URL;
 if (!dbUrl) {
